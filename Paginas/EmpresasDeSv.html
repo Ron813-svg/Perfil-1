@@ -1,11 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>EmpresasSV</title>
 </head>
+
 <body>
-    
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Perfil 1</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Empresarios y Empresas</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../Index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Informacion
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="Empresarios.html">Empresarios</a></li>
+                                <li><a class="dropdown-item" href="EmpresasDeSv.html">Empresas Nacionales</a></li>
+                                <li><a class="dropdown-item" href="EmpresasInternacionales.html">Empresas
+                                        internacionales</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-5 pt-5 align-items-center text-center">
+        <p class="h1">
+            Empresas tecnologicas de El Salvador
+        </p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="card m-4" style="width: 18rem;">
+                    <img src="data:image/jpeg;base64,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"
+                        class="card-img-top mt-2" alt="...">
+                    <div class="card-body">
+                        <p class="h4">12LAB</p>
+                    </div>
+                </div>
+                <div class="card m-4" style="width: 18rem;">
+                    <img src="https://media.licdn.com/dms/image/C4E0BAQEQJRNH-FXY3A/company-logo_200_200/0/1630582811159?e=2147483647&v=beta&t=I-haDQz4n-7vGiF5WMVgamgIYv33clAsf43new2lHCw" 
+                    class="card-img-top mt-2" alt="...">
+                    <div class="card-body">
+                        <p class="h4">Ablerex Latam</p>
+                    </div>
+                </div>
+                <div class="card m-4" style="width: 18rem;">
+                    <img src="https://d2sbaogcozkhdh.cloudfront.net/assets/prod/uploads/1661460911814-ADATEC.png" 
+                    class="card-img-top mt-2" alt="...">
+                    <div class="card-body">
+                        <p class="h4">ADATEC SAS</p>
+                    </div>
+                </div>
+                <div class="card m-4 p-4" style="width: 18rem;">
+                    <img src="https://d2sbaogcozkhdh.cloudfront.net/assets/prod/uploads/1631036682196-aite-01_(1).png" 
+                    class="card-img-top mt-2" alt="...">
+                    <div class="card-body">
+                        <p class="h4">AITE SOLUTIONS</p>
+                    </div>
+                </div>
+                <div class="card m-4" style="width: 18rem;">
+                    <img src="https://media.licdn.com/dms/image/C4E0BAQF_2rzl2oEsvA/company-logo_200_200/0/1631312507082?e=2147483647&v=beta&t=ovTEBLH6_8CmFafovRF-uySAPAYF3NlEeS_jjYqMpTo" 
+                    class="card-img-top mt-2" alt="...">
+                    <div class="card-body">
+                        <p class="h4">Alltic sas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+               
+    </div>
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Desarrollo de Software</span>
+            </div>
+        </footer>
+    </div>
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
 </html>
